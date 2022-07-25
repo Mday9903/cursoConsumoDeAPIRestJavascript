@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        html{
+        font-size: 62.5%;
+        }
+
+        body{
+            
+            /* width: 80%; */
+        }
+        #randomMichis{
+            display: flex;
+            flex-direction: column;
+        }
+        article{
+            display: flex;
+            flex-direction: column;
+        }
+        article img{
+            width: 300px;
+            min-height: 200px;
+            max-height :200px;
+        }
+        button {
+            width: 300px;
+            height: 50px;
+        }
+        #uploadingForm{
+            display: flex;
+            flex-direction: column;
+        }
+        #imgPreview{
+            width: 200px;
+        }
+    </style>
+    <title>Gatitos aleatorios</title>
+</head>
+<body>
+    <h1>Michis App</h1>
+
+    <span id="error"></span>
+    
+    <section id="randomMichis">
+        <h2>Michis aleatorios</h2>
+
+        <article>
+            <img id="img1" alt="Foto gatito aleatorio">
+            <button id="btn1">Guardar michi en favoritos</button>
+        </article>
+        <article>
+            <img id="img2" alt="Foto gatito aleatorio">
+            <button id="btn2">Guardar michi en favoritos</button>
+        </article>        
+        <button id="button-reload">Recargar</button>
+    </section>
+
+    <section id="uploadingMichi">
+        <h2>Sube la foto de tu michi</h2>
+        <div id="divImg">
+        <!-- <img id="imgPreview"> -->
+        </div>
+        <form id="uploadingForm">
+             <input id="file" type="file" name="file" <!--multiple-->/> 
+            <button type="button" onclick="uploadMichiPhoto()">Subir foto de michi</button>
+        </form>
+    </section>
+
+    <section id="favouriteMichis"></section>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/main.js"></script>
+    
+</body>
+</html>
